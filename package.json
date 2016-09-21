@@ -1,0 +1,28 @@
+{
+  "name": "score-quiz",
+  "description": "",
+  "repository": "git://github.com/.git",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "main.js",
+  "dependencies": {
+    "vexflow": "^1.2.83",
+    "vue": "^1.0.26"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "live-server": "^1.0.0",
+    "npm-run-all": "^2.3.0",
+    "tape": "^4.6.0",
+    "vue": "^1.0.26",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "build": "npm-run-all --parallel build:*",
+    "dev": "npm-run-all --parallel watch:*",
+    "build:js": "browserify main.js > dist/bundle.js",
+    "watch:js": "watchify main.js -o dist/bundle.js -dv",
+    "watch:serve": "live-server",
+    "test": "tape test"
+  }
+}
