@@ -38,7 +38,7 @@ new Vue({
       //var related = 'hashedrock';
       var tweetid = 0;
 
-      var tweetLink = '<a href="' + base_url +
+      var tweetLink = base_url +
         '?text=' + encodeURIComponent(text) +
         '&url=' + url +
         //'&via=' + via +
