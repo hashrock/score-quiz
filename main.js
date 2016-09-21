@@ -4,13 +4,15 @@ var Vue = require("vue")
 new Vue({
   el: "main",
   template: `
-    <div id="score"></div>
-    <div>
-      <button v-for="note in notes" @click="clicked(note)">{{note}}</button>
+    <div class="card">
+      <div id="score"></div>
+      <div>
+        <button class="btn btn-primary" v-for="note in notes" @click="clicked(note)">{{note}}</button>
+      </div>
+      <div>{{message}}</div>
+      <div>{{countCorrect}} / {{countAll}} 正解</div>
+      <div><a href="{{tweet}}" target="_blank">この結果をツイート</a></div>
     </div>
-    <div>{{message}}</div>
-    <div>{{countCorrect}} / {{countAll}} 正解</div>
-    <div><a href="{{tweet}}" target="_blank">この結果をツイート</a></div>
   `,
   data: {
     notes: [
